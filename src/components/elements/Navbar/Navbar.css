@@ -1,0 +1,42 @@
+.nav {
+  @apply p-5 w-full bg-gray-400;
+  color: #bcbcbc;
+
+  &__element {
+    @apply flex flex-row justify-between; /* md:justify-between */
+  }
+
+  &__logo {
+    @screen md {
+      width: 6.5em;
+    }
+    width: 4.0em;
+  }
+
+  &__contents {
+    width: auto;
+  }
+
+  &__burger {
+    @apply md:hidden;
+    cursor: pointer;
+    color: #4a5366;
+  }
+
+  &__items {
+    li {
+      @apply hidden pr-5 md:inline-block;
+    }
+  }
+
+  &__vertical_contents {
+    @apply pr-9 py-8 md:hidden;
+    li {
+      @apply pr-2 md:pr-5 py-2;
+    }
+  }
+}
+
+.active-tab {
+  color: #ffffff; 
+}
