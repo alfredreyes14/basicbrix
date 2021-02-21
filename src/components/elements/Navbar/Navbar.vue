@@ -87,6 +87,10 @@ export default class Navbar extends Vue {
     this.showVerticalContents = !this.showVerticalContents
   }
 
+  mounted (): void {
+    console.log(this.$store.getters['getName'])
+  }
+
   /**
    * Emit an event whenver a user clicks an item
    */
