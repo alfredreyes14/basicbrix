@@ -1,0 +1,31 @@
+.card {
+  margin-right: 10px;
+  &__container {
+    @apply flex flex-col bg-white;
+    width: 100%;
+    box-shadow: -1px 1px 4px 2px #dbdbdb;
+
+    &__image {
+      padding: 20px;
+    }
+
+    &__details {
+      @apply flex flex-col;
+
+      &__price {
+        color: #ff5e00;
+      }
+    }
+
+    &__cart {
+      margin-top: 10px;
+      color: white;
+      button {
+        width: 100%;
+        height: 3rem;
+        background-color: #F76A00;
+        outline: none;
+      }
+    }
+  }
+}

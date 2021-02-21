@@ -1,0 +1,28 @@
+.content {
+  &__container {
+    @apply flex flex-col;
+
+    &__advertisment {
+      @apply flex flex-row justify-between;
+    }
+
+    &__products {
+      @apply flex flex-row;
+      padding: 20px 0 10px 10px;
+    }
+
+    &__button {
+      padding: 20px;
+      button {
+        @apply bg-transparent text-black font-semibold py-2 px-4 border border-blue-200 rounded;
+        width: 15%;
+        border-color: #dddddd;
+        transition: background-color 0.8s;
+        &:hover {
+          @apply text-white border-transparent;
+          background-color: #F76A00
+        }
+      }
+    }
+  }
+}
