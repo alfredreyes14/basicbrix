@@ -1,39 +1,42 @@
 .nav {
-  @apply p-5 w-full bg-gray-400;
-  color: #bcbcbc;
+  @apply p-5 w-full;
+  background-color: #f76b00;
+  color: white;
 
   &__element {
     @apply flex flex-row justify-between; /* md:justify-between */
   }
 
   &__logo {
-    @screen md {
-      width: 6.5em;
-    }
-    width: 4.0em;
-  }
-
-  &__contents {
-    width: auto;
-  }
-
-  &__burger {
-    @apply md:hidden;
-    cursor: pointer;
-    color: #4a5366;
-  }
-
-  &__items {
-    li {
-      @apply hidden pr-5 md:inline-block;
+    width: 33%;
+    img {
+      width: 7rem;
     }
   }
 
-  &__vertical_contents {
-    @apply pr-9 py-8 md:hidden;
-    li {
-      @apply pr-2 md:pr-5 py-2;
+  &__search {
+    color: black;
+    width: 33%;
+    input {
+      @apply p-2 block w-full;
+      outline: none;
+      border-radius: 3px;
     }
+    button {
+      @apply h-10 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-white;
+      outline: none;
+      position: absolute;
+      top: 1.2%;
+      left: 62%;
+      border-radius: 3px;
+    }
+    button:hover {
+      background-color: #ffa663;
+    }
+  }
+
+  &__actions {
+    width: 33%;
   }
 }
 

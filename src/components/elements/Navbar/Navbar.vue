@@ -9,39 +9,14 @@
           >
         </a>
       </div>
-      <div
-        v-if="showVerticalContents"
-        class="nav__vertical_contents"
-      >
-        <ul>
-          <li
-            v-for="item in items"
-            :key="item.id"
-            :class="{ 'active-tab': (activeTab === item.id)}"
-            @click="clickItem(item)"
-          >
-            <a>{{ item.text }}</a>
-          </li>
-        </ul>
+      <div class="nav__search">
+        <input class="form-input" placeholder="Search">
+        <button>
+          <Icon style="color: #726f6d;" :name="'search'"/>
+        </button>
       </div>
-      <div class="nav__contents">
-        <div class="nav__burger">
-          <Icon
-            @click="clickHamburger"
-          />
-        </div>
-        <ul
-          class="nav__items"
-        >
-          <li
-            v-for="item in items"
-            :key="item.id"
-            :class="{ 'active-tab': (activeTab === item.id)}"
-            @click="clickItem(item)"
-          >
-            <a>{{ item.text }}</a>
-          </li>
-        </ul>
+      <div class="nav__actions">
+        <Icon style="color: #726f6d; width:" :name="'cart'"/>
       </div>
     </nav>
   </div>
