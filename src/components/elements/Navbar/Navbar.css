@@ -2,6 +2,7 @@
   @apply p-5 w-full;
   background-color: #f76b00;
   color: white;
+  position: fixed;
 
   &__element {
     @apply flex flex-row justify-between; /* md:justify-between */
@@ -26,7 +27,7 @@
       @apply h-10 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-white;
       outline: none;
       position: absolute;
-      top: 1.2%;
+      top: 15%;
       left: 62%;
       border-radius: 3px;
     }

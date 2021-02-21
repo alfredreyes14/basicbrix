@@ -1,7 +1,10 @@
 <template>
-  <div class="bg-red-400">
+  <div>
     <Navbar />
     <router-view />
+    <div class="bg-yellow-400">
+      footer
+    </div>
   </div>
 </template>
 
