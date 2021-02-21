@@ -31,7 +31,8 @@ export default class Card extends Vue {
   productId!: number
 
   emitId (): void {
-    alert(this.productId)
+    const productId: number = this.productId
+    this.$emit('addToCart', { productId })
   }
 }
 </script>
