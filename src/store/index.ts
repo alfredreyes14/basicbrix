@@ -6,8 +6,7 @@ import { Products } from '@/interfaces/Products'
  * Interface for state
  */
 interface State {
-  products: Products[],
-  name: string
+  products: Products[]
 }
 
 /**
@@ -15,7 +14,6 @@ interface State {
  */
 const state: State = {
   products: products,
-  name: 'Vue'
 }
 
 const store = createStore({
@@ -23,9 +21,6 @@ const store = createStore({
   mutations: {},
   actions: {},
   getters: {
-    getName: state => {
-      return state.name
-    },
     getProducts: (state): Products[] => {
       return state.products
     }
