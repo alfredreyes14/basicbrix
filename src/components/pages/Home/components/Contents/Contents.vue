@@ -30,13 +30,22 @@
 import { Vue, Options } from 'vue-class-component'
 import Card from '@/components/elements/Card'
 import { Products } from '@/interfaces/Products'
+import VPagination from 'vue3-pagination'
+import 'vue3-pagination/dist/vue3-pagination.css'
+
+interface ProductId {
+  productId: number
+}
 
 @Options({
   components: {
-    Card
+    Card,
+    VPagination
   }
 })
 export default class Contents extends Vue {
+  page = 1
+
   /**
    * Array of first 5 displayed items
    */
@@ -75,7 +84,7 @@ export default class Contents extends Vue {
   /**
    * Add the product to cart
    */
-  addToCart ({ productId }: any): void {
+  addToCart ({ productId }: ProductId): void {
     alert('id is: ' + productId)
   }
 }
