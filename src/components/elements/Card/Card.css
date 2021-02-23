@@ -2,7 +2,7 @@
   margin-right: 10px;
   &__container {
     @apply flex flex-col bg-white;
-    width: 100%;
+    width: 20rem;
     box-shadow: -1px 1px 4px 2px #dbdbdb;
 
     &__image {

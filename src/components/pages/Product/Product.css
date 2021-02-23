@@ -1,0 +1,14 @@
+.products {
+  padding-top: 80px;
+
+  &__container {
+    @apply flex flex-row justify-center;
+    padding-top: 20px;
+  }
+
+  &__pagination {
+    @apply flex flex-row justify-center;
+    padding: 15px; 
+    align-contents: right;
+  }
+}

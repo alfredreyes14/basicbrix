@@ -26,3 +26,12 @@
     }
   }
 }
+
+.carousel__prev {
+  left: 2%;
+}
+
+.carousel__next {
+  top: 49.1%;
+  right: 6%;
+}

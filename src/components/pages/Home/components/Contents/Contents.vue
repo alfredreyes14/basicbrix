@@ -2,7 +2,7 @@
   <div class="content">
     <div class="content__container">
       <div class="content__container__advertisment">
-        <div class="bg-red-400" style="width: 70%;">Carousel</div>
+        <div class="bg-red-500" style="width: 70%; padding: 20px;">Carousel</div>
         <div class="bg-blue-400" style="width: 30%;">Featured</div>
       </div>
       <div class="content__container__products">
@@ -18,7 +18,7 @@
         />
       </div>
       <div class="content__container__button">
-        <button>
+        <button @click="goToProductPage">
           View More
         </button>
       </div>
@@ -30,8 +30,6 @@
 import { Vue, Options } from 'vue-class-component'
 import Card from '@/components/elements/Card'
 import { Products } from '@/interfaces/Products'
-import VPagination from 'vue3-pagination'
-import 'vue3-pagination/dist/vue3-pagination.css'
 
 interface ProductId {
   productId: number
@@ -39,8 +37,7 @@ interface ProductId {
 
 @Options({
   components: {
-    Card,
-    VPagination
+    Card
   }
 })
 export default class Contents extends Vue {
@@ -50,6 +47,17 @@ export default class Contents extends Vue {
    * Array of first 5 displayed items
    */
   displayed: Products[] = []
+
+  /**
+   * Slideshow image names
+   */
+  slideshow: string[] = [
+    'lcw1',
+    'lcw2',
+    'lcw3',
+    'lcw4',
+    'lcw5'
+  ]
 
   /**
    * Rehydrate displayed array on mount event
@@ -86,6 +94,13 @@ export default class Contents extends Vue {
    */
   addToCart ({ productId }: ProductId): void {
     alert('id is: ' + productId)
+  }
+
+  /**
+   * Jump to product page
+   */
+  goToProductPage (): void {
+    this.$router.push('/product')
   }
 }
 </script>
