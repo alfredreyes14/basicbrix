@@ -1,7 +1,7 @@
 .products {
   padding-top: 80px;
 
-  &__container {
+  &__container, &__others {
     @apply flex flex-row justify-center;
     padding-top: 20px;
   }

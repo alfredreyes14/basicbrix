@@ -9,6 +9,7 @@
         :productId="product.productId"
         :path="product.path"
         :quantity="product.quantity"
+        @addToCart="addToCart"
       />
     </div>
     <div class="products__pagination">
@@ -18,6 +19,18 @@
         :range-size="pages"
         active-color="#DCEDFF"
         @update:modelValue="changPage"
+      />
+    </div>
+    <h2>Other Items</h2>
+    <div class="products__others">
+      <Card
+        v-for="product in displayed"
+        :key="product.productId"
+        :productName="product.productName"
+        :price="product.price"
+        :productId="product.productId"
+        :path="product.path"
+        :quantity="product.quantity"
       />
     </div>
   </div>
@@ -73,7 +86,10 @@ export default class Product extends Vue {
    * Add to cart action
    */
   addToCart ({ productId }: {productId: number}): void {
-    alert(productId)
+    const product: Products[] = this.products
+      .filter((item: Products) => item.productId === productId)
+    this.$store.dispatch('addToTotal', product[0].price)
+    this.$store.dispatch('addToCartItems', product[0].productId)
   }
 
   /**

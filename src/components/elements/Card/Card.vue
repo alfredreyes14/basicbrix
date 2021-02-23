@@ -25,7 +25,8 @@ import { Vue, Options } from 'vue-class-component'
 import { props } from './Props'
 
 @Options({
-  props: props
+  props: props,
+  emits: ['addToCart']
 })
 export default class Card extends Vue {
   productId!: number
